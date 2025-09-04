@@ -1,47 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>bus seat book</h1>
-    <div class="card">
-    <label>passinger details</details></label>
-        <input type="text" placeholder="enter your name">
-        <br>
-        <label>Password</label>
-        <input type="password" placeholder="please enter your password">
-        <br>
-        <!-- radio button -->
-        <br>
-        <label for="h1">Gender</label>
-        <input type="radio"  id="h1"   name="h2" value="html">
-        <label for="h2">Male</label>
-        <input type="radio"  id="h2" name="h2" value="html" >
-        <label for="h2">female</label>
-        <input type="radio" id="h2" name="h2" value="html" >
-        <label>others</label>
-<br>
 
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        <!--select-->
-        <br>
-        <label>select your city</label>
-        <select>
-        <option> merrut</option>
-        <option>gzb</option>
-        <option>delhi</option>
-        <option>haryana</option>
-        </select>
-<br>
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        background-color: #ccff90;
+      }
 
-        <!--button-->
-        <br>
-        <button>seat book</button>
-        
-        <br>
-</div>
-</body>
+      #nav {
+        height: 100px;
+        width: 100%;
+        background-color: #222222;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 40%;
+      }
+
+      img {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+      }
+      #nav h1 {
+        color: white;
+        display: inline-block;
+      }
+      #box {
+        height: 500px;
+        width: 500px;
+        background-color: greenyellow;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-top: 50px;
+        border: 3px solid black;
+      }
+      #box center {
+        font-size: 23px;
+      }
+      input {
+        border: 2px solid black;
+        margin: 5px;
+
+        border-radius: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+      }
+      label {
+        margin: 5px;
+      }
+
+      #h34 {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-right: 10px;
+      }
+      #h56 {
+        background-color: #222222;
+        color: #ffffff;
+        font-size: 26px;
+        font-family: "Segoe UI", sans-serif;
+        padding: 10px 0;
+        letter-spacing: 1px;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px black;
+      }
+
+      #h47 {
+        background-color: rgb(50, 219, 50);
+        color: white;
+        border-radius: 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-top: 10px;
+        border: 2px solid green;
+      }
+
+      .flex-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        margin-top: 20px;
+      }
+
+      #h47:hover {
+        border: 2px solid rgb(4, 57, 4);
+        background-color: rgb(6, 99, 6);
+      }
+
+      input:hover {
+        transform: scale(1.05);
+        transition: 0.3s ease;
+      }
+      input[type="radio"]:hover {
+        transform: scale(1.3);
+        transition: 0.2s ease;
+      }
+
+      input[type="password"] {
+        width: 100%;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="nav">
+        <img
+          src="https://www.cmv360.com/_next/image?url=https%3A%2F%2Fs3.ap-southeast-1.amazonaws.com%2Fdelen%2Fuploads%2Fbf02079d-7953-4819-8c2a-2391572f8d0e-small-New%2520Project%2520%25281%2529.webp&w=3840&q=100"
+          alt=""
+        />
+
+        <h1>Bus Book Seat</h1>
+      </div>
+
+      <div id="box">
+        <center id="h56">Welcome to Bus Booking System</center>
+
+        <div class="flex-container">
+          <form>
+            <label> User Details : </label>
+            <input type="text" placeholder="please Enter Your Details" />
+            <br />
+            <label> User Name : </label>
+            <input type="text" placeholder="please Enter Your Name" />
+            <br />
+            <label> User password : </label>
+            <input type="password" placeholder="please Enter Your Password" />
+            <br />
+            <label> User Gender</label>
+            <br />
+            <input type="radio" id="h1" name="abc" value="html" />
+            <label> Male</label>
+            <br />
+            <input type="radio" id="h1" name="abc" value="html" />
+            <label> female</label>
+            <br />
+            <input type="radio" id="h1" name="abc" value="html" />
+            <label> others</label>
+            <br />
+
+            <select>
+              <option disabled selected>Select Your Destination</option>
+              <option>GHAZIABAD</option>
+              <option>MEERUT</option>
+              <option>DELHI</option>
+              <option>SHAMLI</option>
+            </select>
+            <br />
+            <center>
+              <button
+                id="h47"
+                type="button"
+                onclick="location.href='assign1.html'"
+              >
+                Seat Book
+              </button>
+            </center>
+          </form>
+
+          <img
+            id="h34"
+            src="https://www.cmv360.com/_next/image?url=https%3A%2F%2Fs3.ap-southeast-1.amazonaws.com%2Fdelen%2Fuploads%2Fbf02079d-7953-4819-8c2a-2391572f8d0e-small-New%2520Project%2520%25281%2529.webp&w=3840&q=100"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
