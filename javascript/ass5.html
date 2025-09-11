@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Counter App</title>
+	<style>
+		body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; margin-top: 50px; }
+		.counter { font-size: 3rem; margin: 20px; }
+		button { font-size: 1.2rem; margin: 5px; padding: 10px 20px; }
+	</style>
+</head>
+<body>
+	<img src="https://imgs.search.brave.com/Gqx_ZDwozr3kP4na-kxH-7EFAVlwqS0WDou4nGkMZGY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzcwLzlh/LzJiLzcwOWEyYmRl/Yjk4MmQ2ZmUwYjA5/MDdhYWE1OGFlYWE0/LmpwZw" alt="Logo" style="display:block;margin-bottom:20px;width:350px;height:350px;">
+	<h1>Counter App</h1>
+	<div class="counter" id="counter">0</div>
+	<div>
+		<button onclick="decrement()">-</button>
+		<button onclick="reset()">Reset</button>
+		<button onclick="increment()">+</button>
+	</div>
+	<script>
+		let count = 0;
+		const counter = document.getElementById('counter');
+		function updateCounter() {
+			counter.textContent = count;
+		}
+		function increment() {
+			count++;
+			updateCounter();
+		}
+		function decrement() {
+			count--;
+			updateCounter();
+		}
+		function reset() {
+			count = 0;
+			updateCounter();
+		}
+	</script>
+</body>
+</html>
