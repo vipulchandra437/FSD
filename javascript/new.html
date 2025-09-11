@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #demo{
+          border: 5px solid rgb(78, 229, 40);
+          width: 200px;
+          height: 200px;
+          background-color:rgb(20, 197, 197);
+          padding: 10px;
+        }
+    </style>
+     </div>
+</head>
+<body>
+    <div id="demo">
+        <button onclick="btn()">blue</button>
+        <button onclick="btn1()">green</button>
+        <button onclick="btn2()">red</button>
+        <button onclick="btn3()">yellow</button>
+    <script>
+     function btn()
+     {
+        document.getElementById("demo").style.backgroundColor="blue";
+     }
+        function btn1()
+        {
+            document.getElementById("demo").style.backgroundColor="green";
+        }
+        function btn2()
+        {
+            document.getElementById("demo").style.backgroundColor="red";
+        }
+        function btn3()
+        {
+            document.getElementById("demo").style.backgroundColor="yellow";
+        }
+    
+        </script>
+</body>
+</html>
