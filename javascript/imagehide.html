@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Hide and Change</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; flex-direction: column; align-items: center; margin-top: 50px; }
+        .img-container { margin: 20px; }
+        img { width: 200px; height: 200px; object-fit: cover; border: 2px solid #333; }
+        button { margin: 10px; padding: 10px 20px; font-size: 1rem; }
+    </style>
+</head>
+<body>
+    <h2>Image 1: Hide/Show</h2>
+    <div class="img-container">
+        <img id="img1" src="https://images.unsplash.com/photo-1444492417251-9c84a5fa18e0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b3V0ZG9vcnxlbnwwfHwwfHx8MA%3D%3D" alt="Image 1">
+    </div>
+    <button onclick="toggleImage1()" id="btn1">Hide Image</button>
+
+    <h2>Image 2: Change</h2>
+    <div class="img-container">
+        <img id="img2" src="https://images.unsplash.com/photo-1444492417251-9c84a5fa18e0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8b3V0ZG9vcnxlbnwwfHwwfHx8MA%3D%3D" alt="Image 2">
+    </div>
+    <button onclick="changeImage2()">Change Image</button>
+
+    <script>
+        let img1Visible = true;
+        function toggleImage1() {
+            const img1 = document.getElementById('img1');
+            const btn1 = document.getElementById('btn1');
+            img1Visible = !img1Visible;
+            img1.style.display = img1Visible ? 'block' : 'none';
+            btn1.textContent = img1Visible ? 'Hide Image' : 'Show Image';
+        }
+
+        let img2Changed = false;
+        function changeImage2() {
+            const img2 = document.getElementById('img2');
+            if (!img2Changed) {
+                img2.src = 'https://images.unsplash.com/photo-1543039625-14cbd3802e7d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8b3V0ZG9vcnxlbnwwfHwwfHx8MA%3D%3D';
+                img2Changed = true;
+            } else {
+                img2.src = 'https://images.unsplash.com/photo-1543039625-14cbd3802e7d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8b3V0ZG9vcnxlbnwwfHwwfHx8MA%3D%3D';
+                img2Changed = false;
+            }
+        }
+    </script>
+</body>
+</html>
