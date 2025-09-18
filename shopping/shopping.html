@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            background-color: lightgrey;
+        }
+
+        .card {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: rgb(17, 99, 39);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: rgb(6, 66, 26);
+        }
+        button:active {
+            background-color: rgb(3, 36, 14);
+        }
+        img{
+            width: 200px;
+            height: 130px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        p{
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }   
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+    <div class="card"><img
+        src="https://plus.unsplash.com/premium_photo-1664392122271-a1aedb05a7c6?q=80&w=1949&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="telivision"><p>TELEVISION</p><button onclick="showInfo('tv')">info</button></div>
+    <div class="card"><img
+        src="https://images.unsplash.com/photo-1620390108932-930ac0adc512?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="gaming"><p>GAMING</p><button onclick="showInfo('game')">info</button></div>
+    <div class="card"><img
+        src="https://images.unsplash.com/photo-1525598912003-663126343e1f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        alt="PHONE"><p>PHONE</p><button onclick="showInfo('phone')">info</button></div>
+    </div>
+</body>
+<script>
+    function showInfo(type) {
+        let info = '';
+        if (type === 'tv') {
+            window.open('tv-info.html', '_blank');
+        } else if (type === 'game') {
+            window.open('game-info.html', '_blank');
+        } else if (type === 'phone') {
+            window.open('phone-info.html', '_blank');
+        }
+    }
+</script>
+</html>
