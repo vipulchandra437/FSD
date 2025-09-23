@@ -1,0 +1,24 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.preview-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    min-height: 80vh;
+}
+
+#resume-preview {
+    font-family: 'Times New Roman', Times, serif;
+}
