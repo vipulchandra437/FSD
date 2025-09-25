@@ -1,0 +1,35 @@
+#to_do_list{
+    height: 400px;
+    width: 300px;
+    border: 2px solid black;
+    margin-top: auto;
+    background-color: aliceblue;
+}
+input{
+    height: 30px;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 2px solid black;
+}
+#getcard{
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    border: 2px solid black;
+    background-color: aliceblue;
+    margin-bottom: 0px;
+    position: relative;
+    top: 190px;
+    right: -100px;
+   
+}
+img{
+    height: 100px;
+    width: 150px;
+    position: relative;
+    left: 100px;
+    top: 0px;
+    border-radius: 10px;
+}
