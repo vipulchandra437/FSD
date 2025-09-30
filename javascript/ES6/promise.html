@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <script>
+        const myPromise = new Promise((resolve, reject) => {
+            const success = true; 
+
+            setTimeout(() => {
+                if (success) {
+                    resolve('Promise resolved successfully!');
+                } else {
+                    reject('Promise rejected.');
+                }
+            }, 2000);
+        });
+
+        myPromise
+            .then((message) => {
+                document.getElementById("result").innerHTML = message;
+            })
+            .catch((error) => {
+                document.getElementById("result").innerHTML = error;
+            });
+    </script>
+</body>
+</html>
