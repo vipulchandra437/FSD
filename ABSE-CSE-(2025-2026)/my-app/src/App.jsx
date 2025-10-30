@@ -3,46 +3,57 @@ import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import image from "./assets/logo.jpg"
 import Navbar from './component/Navbar'
+import Card from './component/card.jsx'
+
 function App() {
-
-
   return (
-    <div>{/* nav bar is start  */}
-  <Navbar/>
-      {/* nav bar closed */}
+    <div>
+      {/* Navbar */}
+      <Navbar />
 
-      {/* button is start */}
-      <div class="container mt-3">
-  <h2>Button Styles</h2>
-  <button type="button" class="btn">Basic</button>
-  <button type="button" class="btn btn-primary">Primary</button>
-  <button type="button" class="btn btn-secondary">Secondary</button>
-  <button type="button" class="btn btn-success">Success</button>
-  <button type="button" class="btn btn-info">Info</button>
-  <button type="button" class="btn btn-warning">Warning</button>
-  <button type="button" class="btn btn-danger">Danger</button>
-  <button type="button" class="btn btn-dark">Dark</button>
-  <button type="button" class="btn btn-light">Light</button>
-  <button type="button" class="btn btn-link">Link</button>      
-</div>
+      {/* Cards row */}
+      <div style={{ padding: 20 }}>
+        <div className="d-flex flex-wrap" style={{ gap: 16 }}>
+          <Card name="Card 1" education="B.Sc Computer Science" />
+          <Card name="Card 2" education="B.Com Commerce" />
+          <Card name="Card 3" education="B.A English" />
+          <Card name="Card 4" education="B.Sc Mathematics" />
+          <Card name="Card 5" education="B.Tech Engineering" />
+        </div>
 
-{/* button is closed */}
+        {/* Button styles demo */}
+        <div className="container mt-3">
+          <h2>Button Styles</h2>
+          <button type="button" className="btn">Basic</button>
+          <button type="button" className="btn btn-primary">Primary</button>
+          <button type="button" className="btn btn-secondary">Secondary</button>
+          <button type="button" className="btn btn-success">Success</button>
+          <button type="button" className="btn btn-info">Info</button>
+          <button type="button" className="btn btn-warning">Warning</button>
+          <button type="button" className="btn btn-danger">Danger</button>
+          <button type="button" className="btn btn-dark">Dark</button>
+          <button type="button" className="btn btn-light">Light</button>
+          <button type="button" className="btn btn-link">Link</button>
+        </div>
 
-{/* card is start */}
-<div class="container mt-3">
- 
-  <div class="card">
-    <div class="card-body">
-      <h4 class="card-title">Card title</h4>
-      <p class="card-text">Some example text. Some example text.</p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-</div>
+        {/* Example card */}
+        <div className="container mt-3">
+          <Card />
+          <div className="card mt-3">
+            <div className="card-body">
+              <h4 className="card-title">Card title</h4>
+              <p className="card-text">Some example text. Some example text.</p>
+              <a href="#" className="card-link">Card link</a>
+              <a href="#" className="card-link">Another link</a>
+            </div>
+          </div>
+        </div>
 
-{/* card is cloesd */}
-<img src={image} height={700} width={400} alt="logo"></img>
+        {/* Logo image */}
+        <div style={{ marginTop: 20 }}>
+          <img src={image} height={700} width={400} alt="logo" />
+        </div>
+      </div>
     </div>
   )
 }
